@@ -29,12 +29,22 @@
           <p> <b>주최 : 서울특별시
           <p> <b>대상 : 만 19~24세(98.1.1.~04.12.31.)인 청년 
           <p> <b>신청 기간 : ~5월 31일
+		  <div class='counter'></div>
           <p> <b>
           <p>	<a href="https://youth.seoul.go.kr/site/main/content/transportationfee_intro" target="_blank" class="btn btn-info"> 검색 바로가기 &raquo;</a>
                <a href="../hyperlink.html" class="btn btn-secondary"> 뒤로 &raquo;</a>
       </div>
     </div>
   </div>
+	<script>
+        	let counter = document.querySelector('.counter');
+        	let today = new Date(), //현재 날짜 가져오기
+            	dday = new Date("May 31,2023, 00:00:00").getTime(), //디데이
+            	gap = dday - today,
+            	result = Math.floor(gap / (1000 * 60 * 60 * 24));
+        
+        	counter.innerHTML = `D-${result}`
+    	</script>
       
 <hr>
 	
