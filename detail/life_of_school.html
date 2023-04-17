@@ -40,10 +40,10 @@
         	let counter = document.querySelector('.counter');
         	let today = new Date(), //현재 날짜 가져오기
            	dday = new Date(2023, 3, 19).getTime(), //디데이
-            	gap = dday - today,
+            	gap = dday - today + 1,
             	result = Math.floor(gap / (1000 * 60 * 60 * 24));
         
-        	counter.innerHTML = `D-${result + 1}`
+        	counter.innerHTML = `D-${result}`
     	</script>
       
 <hr>
