@@ -39,7 +39,7 @@
 	<script>
         	let counter = document.querySelector('.counter');
         	let today = new Date(), //현재 날짜 가져오기
-            	dday = new Date("May 31,2023, 00:00:00").getTime(), //디데이
+            	dday = new Date(2023, 4, 31).getTime(), //디데이
             	gap = dday - today,
             	result = Math.floor(gap / (1000 * 60 * 60 * 24));
         
