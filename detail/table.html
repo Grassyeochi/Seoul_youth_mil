@@ -30,12 +30,26 @@
           <p> <b>대상 : 
           <p> <b>신청 기간 : 
           <p> <b>
+		  <div id="count"></div>
           <p>	<a href="#" target="_blank" class="btn btn-info"> 검색 바로가기 &raquo;</a>
                <a href="../hyperlink.html" class="btn btn-secondary"> 뒤로 &raquo;</a>
       </div>
     </div>
   </div>
-      
+	<script>
+    	var dday = new Date("April 25, 2023, 0:00:00").getTime();
+
+	setInterval(function() {
+  	var today = new Date().getTime();
+  	var gap = dday - today;
+  	var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
+  	var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  	var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+  	var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+
+  	document.getElementById("count").innerHTML = "D-DAY까지 " + day + "일 " + hour + "시간 " + min + "분 " + sec + "초 남았습니다.";
+	}, 1000);  
+	</script>
 <hr>
 	
 	<div class="container">
