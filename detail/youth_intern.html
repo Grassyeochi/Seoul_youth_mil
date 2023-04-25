@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ 	<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  	<title>서울시청년부상제대군인</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
+    		<div class="container">
+        		<div class="navbar-header">    
+            			<a class="navbar-brand" href="../index.html">Home</a>
+        		</div>
+    		</div>
+	</nav>
+  
+  <div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">2023년 서울형 청년인턴 직무캠프 인턴십</h1>
+		</div>
+	</div>
+  
+  <div class="container">
+		<div class="row" align="Left">
+      <div class="col-md-6">
+       <!-- 내용, 주최, 대상, 신청 기간, 제한 사항, URL -->
+	        <h5>직무분야별 교육과 현장·실무 중심 인턴십 과정을 접목하여 청년구직자의 일 경험 및 직업경력개발을 지원하는 사업</h5>
+          <p> <b>주최 : 서울특별시
+          <p> <b>대상 : 만 18세 이상 ∼ 34세 이하의 서울거주 청년(300명)
+          <p> <b>제한 사항 : 고등학교. 대학교, 대학원에 재학 또는 휴학 중인 자. 정부, 서울시 일자리창출 관련 사업 참여자 등
+          <p> <b>신청 기간 : 2023.5.8 ~ 2023.5.15. (직무교육 훈련 기간 2023. 6∼8월, 3개월간) (청년인턴 운영 기간 2023. 9∼11월, 3개월간)
+          <h5>참여자 모집 공고를 자세히 확인 할 것을 요함.</h5>
+          <p> <b>
+		      <div id="count1"></div>
+          <div id="count2"></div>
+          <p>	<a href="https://job.seoul.go.kr/www/custmr_cntr/ntce/WwwNotice.do?method=getWwwNotice&noticeCmmnSeNo=1" target="_blank" class="btn btn-info"> 공고 바로가기 &raquo;</a>
+               <a href="../hyperlink.html" class="btn btn-secondary"> 뒤로 &raquo;</a>
+      </div>
+    </div>
+  </div>
+	<script>
+    	var dday = new Date("May 15, 2023, 0:00:00").getTime();
+    
+	    setInterval(function() {
+  	    var today = new Date().getTime();
+  	    var gap = dday - today;
+  	    var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
+  	    var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  	    var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+  	    var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+        
+        document.getElementById("count1").innerHTML = "접수 시작일까지 " + day + "일 " + hour + "시간 " + min + "분 " + sec + "초 남았습니다.";
+  	    document.getElementById("count2").innerHTML = "접수 마감일까지 " + day + "일 " + hour + "시간 " + min + "분 " + sec + "초 남았습니다.";
+	    }, 1000);  
+	</script>
+<hr>
+	
+	<div class="container">
+    		<p>●위 정보는 서울시청년부상군인제대군인센터에서 제공하는 복지해택 모음 누리집 입니다.</p>
+   		<p>●제작자 : 여상윤(정보부장)</p>
+	</div>
+</body>
+</html>
