@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ 	<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  	<title>서울시청년부상제대군인</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
+    		<div class="container">
+        		<div class="navbar-header">    
+            			<a class="navbar-brand" href="../index.html">Home</a>
+        		</div>
+    		</div>
+	</nav>
+  
+  <div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">국세청 근로•자녀 장려금</h1>
+		</div>
+	</div>
+  
+  <div class="container">
+		<div class="row" align="Left">
+      <div class="col-md-6">
+       <!-- 내용, 주최, 대상, 신청 기간, 제한 사항, URL -->
+	        <h5>국세청 근로•자녀 장려금 신청</h5>
+          <p> <b>주최 : 국세청
+          <p> <b>대상 : 대상자에게 안내 문자 전송 및 내부 심사
+          <p> <b>신청 기간 : ~2023년 05월 31일
+          <p> <b>1544-9944로 전화 및 국세청 홈택스에서 직접 신청
+		  <div id="count"></div>
+          <p>	<a href="https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index.xml" target="_blank" class="btn btn-info"> 국세청 홈택스 바로가기 &raquo;</a>
+            <p> <a href="tel:1544-9944" class="btn btn-info">전화 걸기(스마트폰 환경에서만 작동)</a>
+            <a href="../hyperlink.html" class="btn btn-secondary"> 뒤로 &raquo;</a>
+      </div>
+    </div>
+  </div>
+	<script>
+    	var dday = new Date("May 31, 2023, 0:00:00").getTime();
+
+	setInterval(function() {
+  	var today = new Date().getTime();
+  	var gap = dday - today;
+  	var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
+  	var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  	var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+  	var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+
+  	document.getElementById("count").innerHTML = "D-DAY까지 " + day + "일 " + hour + "시간 " + min + "분 " + sec + "초 남았습니다.";
+	}, 1000);  
+	</script>
+<hr>
+	
+	<div class="container">
+    		<p>●위 정보는 서울시청년부상군인제대군인센터에서 제공하는 복지해택 모음 누리집 입니다.</p>
+   		<p>●제작자 : 여상윤(정보부장)</p>
+	</div>
+</body>
+</html>
